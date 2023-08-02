@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Crud management</title>
+</head>
+<body>
+<center>
+
+
+<form action="{% url 'Insertdata' %}" method="post">{% csrf_token %}
+
+         <h1>Insert Data Form</h1>
+    <table >
+        <thead>
+
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Email id</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input type="tel" name="contact"></td>
+        </tr>
+        <tr>
+            <td>Passion</td>
+            <td><input type="text" name="passion"></td>
+        </tr>
+        <tr>
+            <td>
+                 <center><h4 style="color:red">{{a}}</h4></center>
+                <input type="submit" value="Insert">
+            </td>
+        </tr>
+        </thead>
+
+    </table>
+
+
+</form>
+
+</center>
+</body>
+</html>
